@@ -22,11 +22,11 @@ export default createStore({
       .then((products)=> context.commit("setProducts",products))
     },
 
-  //   getProduct: async (context,id) => {
-  //     fetch("https://sisiphopeps.github.io/data/db.json/"+ id)
-  //     .then((response)=> response.json())
-  //     .then((product)=> context.commit("setProduct",product))
-  // },
+    getProduct: async (context,id) => {
+      fetch("https://sisiphopeps.github.io/data/db.json/"+ id)
+      .then((response)=> response.json())
+      .then((product)=> context.commit("setProduct",product))
+  },
 }
  
 });

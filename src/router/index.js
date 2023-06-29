@@ -7,6 +7,7 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+
   {
     path: '/about',
     name: 'about',
@@ -15,17 +16,28 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
+
   {path: '/products',
     name: 'products',
-    component:() => import(/* webpackChunkName: "products" */ '../views/ProductsView.vue')
+    component:() => import('../views/ProductsView.vue')
   },
 
   {path: '/products/:id',
     name: 'product',
-    component:() => import(/* webpackChunkName: "products" */ '../views/ProductsView.vue'),
+    component:() => import( '../views/ProductsView.vue'),
     props: true,
-  }
+  },
 
+  
+  {path: '/contact-form',
+    name: 'contact-form',
+    component:() => import('../components/ContactForm.vue')
+  },
+
+  {path: '/admin',
+  name: 'admin',
+  component:() => import('../components/AdminComp.vue')
+},
 ]
 
 const router = createRouter({

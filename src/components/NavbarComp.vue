@@ -3,8 +3,8 @@
    <router-link to="/" class="nav">Home</router-link>
    <router-link to="/about" class="nav">About</router-link>
    <router-link to="/products" class="nav">Products</router-link>
-   <router-link to="/" class="nav">Contact</router-link>
-
+   <router-link to="/contact-form" class="nav">Contact</router-link>
+   <router-link to="/admin" class="nav">Admin</router-link>
 </nav>
 </template>
 <script>
